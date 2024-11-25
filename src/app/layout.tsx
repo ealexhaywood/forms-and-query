@@ -2,10 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Providers } from "@/app/providers";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { pages } from "@/lib/pages";
-import { Current } from "@/app/current";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,21 +28,8 @@ export default function RootLayout({
     <Providers>
       <html lang="en">
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased container mx-auto space-y-4 bg-muted min-h-dvh`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased px-2 container mx-auto space-y-4 bg-muted min-h-dvh`}
         >
-          <h1 className="text-2xl tracking-tight font-bold pt-4">
-            Form and Data Fetching Recipes
-          </h1>
-          <ol className="list-decimal list-inside text-sm">
-            {pages.map((page) => (
-              <li key={page.title}>
-                <Button asChild variant="link" className="py-0 h-6">
-                  <Link href={page.href}>{page.title}</Link>
-                </Button>
-              </li>
-            ))}
-          </ol>
-          <Current />
           {children}
         </body>
       </html>
