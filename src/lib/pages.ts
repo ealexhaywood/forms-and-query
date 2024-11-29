@@ -40,3 +40,18 @@ export const formsPages = [
     href: "/lessons/load-with-server-data-alternative",
   },
 ];
+
+export const recipePages = [
+  {
+    title: "Separating user and server concerns",
+    href: "/lessons/separating-concerns",
+  },
+  {
+    title: "Avoid data fetching waterfalls",
+    href: "/lessons/how-to-avoid-waterfalls",
+  },
+  {
+    title: "Forms with data grids using TanStack Table",
+    href: "/lessons/data-grids",
+  },
+];

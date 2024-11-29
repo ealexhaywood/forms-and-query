@@ -21,7 +21,7 @@ export default function ErrorHandling() {
   }, []);
 
   if (error) {
-    return "There was an error";
+    return error;
   }
 
   if (!data) {
